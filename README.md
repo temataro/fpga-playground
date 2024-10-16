@@ -36,3 +36,6 @@ nextpnr-ice40 --hx1k --package vq100 --json hardware.json --asc hardware.asc --p
 icepack hardware.asc hardware.bin
 iceprog hardware.bin
 ```
+
+We can Makefile away this procedure now with
+`make prog TOP_MOD=<your_top_verilog_file>`
