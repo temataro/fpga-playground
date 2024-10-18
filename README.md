@@ -16,8 +16,7 @@ Fixed Costs:
 
   run `lsusb` and find:
   ```
-  Bus 003 Device 002: ID 0403:6010 Future Technology Devices International, Ltd FT2232C/D/H Dual UART/FIFO IC
-B
+  Bus 003 Device 002: ID 0403:6010 Future Technology Devices International, Ltd FT2232C/D/H Dual UART/FIFO ICB
 ```
 
 ## Programming the FPGA
@@ -39,3 +38,9 @@ iceprog hardware.bin
 
 We can Makefile away this procedure now with
 `make prog TOP_MOD=<your_top_verilog_file>`
+
+### Getting Started Yourself
+Go to `./projects/` and make a project directory of your own. Then either run `apio init --board go-board`
+so you can use `apio upload`, or copy the Makefile at the root of this repository to use `make prog`.
+
+Also copy whatever pins you need to alias into your own pcf file or copy the go-board.pcf from the root directory.
