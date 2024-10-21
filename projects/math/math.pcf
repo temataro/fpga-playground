@@ -1,0 +1,21 @@
+# -----------------------------------------------------------------------------
+#- Go board constraint file (.pcf)
+#- By Juan Gonzalez (Obijuan)
+#- April - 2016
+#- GPL license
+#- Data obtained from the go-board official constraint file:
+#-   https://www.nandland.com/goboard/Go_Board_Constraints.pcf
+#-
+# -----------------------------------------------------------------------------
+# --  Board info: https://www.nandland.com/goboard/introduction.html
+# --  Pinout: https://www.nandland.com/goboard/images/Go_Board_V1.pdf
+
+# This is the specific pin to LED assignment for the iCE40 HX1K on the
+# go-board
+
+# ---=== LEDs ===---
+set_io --warn-no-port is_prime  56
+set_io --warn-no-port SW1 53
+#  -===- --- -===-
+
+set_io --warn-no-port clk 15
