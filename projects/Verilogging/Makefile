@@ -19,7 +19,7 @@ sim:
 	gtkwave $(TOP_MOD)_tb.vcd
 
 clean:
-	rm *.asc *.bin *.json $(TOP_MOD)
+	rm *.asc *.bin *.json ./$(TOP_MOD)
 
 .PRECIOUS: %.bin %.asc %.vcd
 .PHONY: prog clean sim
