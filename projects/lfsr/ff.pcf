@@ -1,0 +1,12 @@
+# --- outputs ---
+set_io --warn-no-port Q  56  # LED1
+set_io --warn-no-port Q_bar  57  # LED2
+set_io --warn-no-port clk_out  59  # LED3
+
+# --- --- --- ---
+
+# --- inputs ---
+set_io --warn-no-port D  53  # SW1
+set_io --warn-no-port rst_n  51  # SW2
+set_io --warn-no-port clk 15
+# --- --- --- ---
