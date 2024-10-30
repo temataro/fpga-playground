@@ -21,5 +21,10 @@ sim:
 clean:
 	rm *.asc *.bin *.json $(TOP_MOD)
 
+init:
+	@echo "This only copies the base files at the base directory of this repo\
+	to a project folder <project_name> inside ./projects/<project_name>"
+	cp ../../go-board.pcf ../Verilogging/logics_tb.v .
+
 .PRECIOUS: %.bin %.asc %.vcd
-.PHONY: prog clean sim
+.PHONY: prog clean sim init
