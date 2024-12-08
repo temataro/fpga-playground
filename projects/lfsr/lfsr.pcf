@@ -1,0 +1,24 @@
+# -----------------------------------------------------------------------------
+#- Go board constraint file (.pcf)
+#- By Juan Gonzalez (Obijuan)
+#- April - 2016
+#- GPL license
+#- Data obtained from the go-board official constraint file:
+#-   https://www.nandland.com/goboard/Go_Board_Constraints.pcf
+#-
+# -----------------------------------------------------------------------------
+# --  Board info: https://www.nandland.com/goboard/introduction.html
+# --  Pinout: https://www.nandland.com/goboard/images/Go_Board_V1.pdf
+
+# -------------------------- SYSTEM CLOCK ------------------------------------
+set_io --warn-no-port CLK 15
+
+# ------------ User Leds ------------------------------------------------------
+set_io --warn-no-port LED1  56
+set_io --warn-no-port LED2  57
+set_io --warn-no-port LED3  59
+set_io --warn-no-port LED4  60
+
+# ------------ User push-buttons ----------------------------------------------
+set_io --warn-no-port SW1  53
+set_io --warn-no-port SW2  51
