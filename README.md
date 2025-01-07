@@ -1,6 +1,8 @@
-# Notes on Programming and Using the NANDLAND Go Board
+# Notes on Programming and a Lattice FPGA ~Using the NANDLAND Go Board~
 
 Some notes on this FPGA and [dev board](https://nandland.com/the-go-board/).
+
+Though we're covering the HX1K (1K LUT units), the specific Lattice ICE40 FPGA we're using doesn't matter for the build instructions (so long as we update the targets in the Makefile or tell Apio what's up.)
 
   - Lattice ICE40 HX1K FPGA
   - 1280 Logic cells.
@@ -22,11 +24,16 @@ Fixed Costs:
 ## Programming the FPGA
 
 ### My first blinky
-Apio is a great tool. Make a venv and pip install it.
+
+> [!NOTE]
+> Apio is a great tool. It abstracts away all the background stuff when building the bitstream for your FPGA. Make a venv and pip install it. Here are the [build instructions for Windows](https://nandland.com/set-up-apio-fpga-build-and-program/).
+
 It will geneate the pcf and other necessary things for your specific fpga, give you examples (`apio examples -l` to see a list).
 Then you can run `apio upload` to the USB device.
 In your upload folder, run `apio init --board go-board` to generate the `apio.ini` file it will use for the uploading.
 Make sure to change the name of the top module it expects to find to the name of your Verilog module.
+
+---
 
 TODO: Try the more verbose approach of doing each step manually.
 ```shell
@@ -35,9 +42,11 @@ nextpnr-ice40 --hx1k --package vq100 --json hardware.json --asc hardware.asc --p
 icepack hardware.asc hardware.bin
 iceprog hardware.bin
 ```
+---
 
-We can Makefile away this procedure now with
-`make prog TOP_MOD=<your_top_verilog_file>`
+> [!IMPORTANT]
+> We can Makefile away this procedure now with
+> `make prog TOP_MOD=<your_top_verilog_file>`
 
 ### Getting Started Yourself
 Go to `./projects/` and make a project directory of your own. Then either run `apio init --board go-board`
