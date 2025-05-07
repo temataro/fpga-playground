@@ -11,6 +11,12 @@ We will be using the opensource toolchain combination of Yosys, Icestorm and nex
 Consult the oracle below:
 https://eecs.blog/lattice-ice40-fpga-icestorm-tutorial/
 
+Some prerequisites: `sudo apt install -y iverilog gtkwave`
+Simply run `./setup-dev-env.sh` for when this website like all others succumbs
+to the inevitable pull of entropy.
+Also, building these from source isn't a complicated process but it does fail
+with the commands noted in the blog...
+
 Basic workflow will include fixed start costs like assigning your pcf file, setting up a Makefile to convert your Verilog into asc then bin files and then programming the 1MB flash memory with the bitstream.
 
 Fixed Costs:
